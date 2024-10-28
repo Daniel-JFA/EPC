@@ -1,0 +1,88 @@
+// ---------------*--------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+// --------------------------- LOGIN FORM ---------------------------------------------
+.container {
+  height: 100vh;
+  overflow: hidden;
+  display: inline-flex;
+  width: 100%;
+}
+
+#login-form{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color:#1f9cd2;
+}
+
+#login-form > .img-alcaldia{
+  height: 200px;
+  width: 200px;
+  background-image: url(../../imgs/alcaldiaLogo.png);
+  background-size: cover;
+}
+
+#login-inputs{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+#login-inputs > button{
+  height: 60px;
+  border-radius: 30px;
+  margin: 7px;
+  border: 0;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-radius: 30px;
+  margin: 7px;
+  border: 0;
+  text-align: center;
+  padding: 0 20px;
+  text-align: start;
+}
+
+.input-container i {
+  margin-right: 10px;
+  color: #888;
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 8px;
+}
+
+::placeholder{
+  text-align: start;
+}
+
+//----------------- Imagen de Escuela de Participación Ciudadana -------------------------------
+#img-login{
+  width: 45%;
+  background-image: url(../../imgs/loginImage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

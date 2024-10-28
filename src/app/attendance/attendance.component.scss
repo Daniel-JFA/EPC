@@ -1,0 +1,41 @@
+// ---------------*--------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+//---------------BODY ----------------------------------
+
+.main-attendance-container{
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.attendance-container {
+  width: 60%;
+  height: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.save-attendance{
+  margin: 30px;
+  height: 60px;
+  width: 200px;
+  background: linear-gradient(to top, rgb(28, 182, 240), rgb(41, 189, 210));
+  border-radius: 40px;
+  border-style: none;
+  box-shadow: 0px 4px 10px rgba(100, 204, 233, 0.5);
+  color: white;
+  font-size: medium;
+}

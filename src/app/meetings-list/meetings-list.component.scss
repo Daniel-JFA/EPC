@@ -1,0 +1,42 @@
+// ---------------*--------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+//---------------BODY ----------------------------------
+
+.main-attendance-meetings-container{
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.container-meetings{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: 20px 0 0 0;
+  line-height: 40px;
+}
+
+.edit-meeting{
+  background-image: url(../../imgs/editIcon.png);
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  filter: invert(56%) sepia(77%) saturate(480%) hue-rotate(150deg) brightness(91%) contrast(106%);
+}
