@@ -2,28 +2,20 @@
   <section id="login-form">
     <div class="img-alcaldia"></div>
     <h1 style="width: 50%; text-align: center; margin-bottom: 40px;">UNIDAD DE GESTIÓN FORMATIVA</h1>
-    <form (ngSubmit)="onSubmit()" id="login-inputs" [formGroup]="loginForm">
+    <form (ngSubmit)="login()" id="login-inputs">
       <!-- Inputs -->
       <div class="input-container" style="background-color: rgba(169, 169, 169, 0.199);">
         <i class="fas fa-user"></i>
-        <input type="text" placeholder="Número de identificación *" style="background-color: transparent" id="username" formControlName="name" name="username" required>
-        <div *ngIf="loginForm.get('name')?.invalid && loginForm.get('name')?.touched">
-          <small *ngIf="loginForm.get('name')?.errors?.['required']">El nombre de usuario es obligatorio.</small>
-          <small *ngIf="loginForm.get('name')?.errors?.['minlength']">Debe tener al menos 3 caracteres.</small>
-        </div>
+        <input type="text" placeholder="Número de identificación *" style="background-color: transparent" id="username" [(ngModel)]="username" name="username" required>
       </div>
 
       <div class="input-container" style="background-color: rgba(169, 169, 169, 0.199);">
         <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Contraseña *" style="background-color: transparent" id="password" formControlName="pass" name="password" required>
-        <div *ngIf="loginForm.get('pass')?.invalid && loginForm.get('pass')?.touched">
-          <small *ngIf="loginForm.get('pass')?.errors?.['required']">La contraseña es obligatoria.</small>
-          <small *ngIf="loginForm.get('pass')?.errors?.['minlength']">Debe tener al menos 6 caracteres.</small>
-        </div>
+        <input type="password" placeholder="Contraseña *" style="background-color: transparent" id="password" [(ngModel)]="password" name="password" required>
       </div>
 
       <!-- Btn Ingresar -->
-      <button [disabled]="loginForm.invalid" type="submit" style="background-color: #009D7E; height: 45px; color: aliceblue; margin-top: 20px;"><strong>INGRESAR</strong></button>
+      <button type="submit" style="background-color: #009D7E; height: 45px; color: aliceblue; margin-top: 20px;"><strong><a href="/home" style="text-decoration: none;">INGRESAR</a></strong></button>
     </form>
   </section>
   <section id="img-login">
