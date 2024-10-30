@@ -1,0 +1,15 @@
+.main-evidences-container{
+  background-color: #EFEFEF;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.evidences{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+}

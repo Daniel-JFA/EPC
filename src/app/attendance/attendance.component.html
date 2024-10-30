@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="main-attendance-container">
-  <h1 style="width: 60%; text-align: start; font-family: Arial, Helvetica, sans-serif; color: #14B3EE; margin-left: 20px; margin-top: 20px;">Asistencia</h1>
-  <h2 style="width: 60%; text-align: start; font-family: Arial, Helvetica, sans-serif; color: #1EBAD2; margin-left: 20px;">Encuentro {{ id }}</h2>
+  <h1 style="width: 60%; text-align: start; font-family: Arial, Helvetica, sans-serif; font-size: 2vw; color: #14B3EE; margin-left: 20px; margin-top: 20px;">Asistencia</h1>
+  <h2 style="width: 60%; text-align: start; font-family: Arial, Helvetica, sans-serif; font-size: 1.5vw; color: #1EBAD2; margin-left: 20px;">Encuentro {{ id }}</h2>
   <div class="attendance-container">
     @for (student of estudiantesPrueba; track student; let index = $index) {
       <div class="each-service">
@@ -9,5 +9,5 @@
       </div>
     }
   </div>
-  <button class="save-attendance"><b>GUARDAR</b></button>
+  <button class="save-attendance"><b><a href="/evidences" style="text-decoration: none; color: white;">GUARDAR ASISTENCIA</a></b></button>
 </div>

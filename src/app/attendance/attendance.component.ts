@@ -3,6 +3,7 @@ import { AttendanceUsersComponent } from '../components/attendance-users/attenda
 import { HeaderComponent } from '../components/header/header.component';
 import { MeetingsListComponent } from '../meetings-list/meetings-list.component';
 import { Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-attendance',
@@ -14,6 +15,14 @@ import { Input } from '@angular/core';
 export class AttendanceComponent {
   @Input() id?: string;
   estudiantesPrueba = ['Juliana', 'Daniel', 'Santiago', 'Celeste'];
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
+  }
   estudiantePrueba = [
     {
       nombre: 'Juliana',
