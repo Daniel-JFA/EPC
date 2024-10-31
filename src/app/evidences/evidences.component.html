@@ -1,14 +1,20 @@
 <app-header></app-header>
 <div class="main-evidences-container">
   <div class="evidences">
-    <app-cards [title]='"Evidencia de asistencia"'>
+    <app-cards [title]='"Evidencia de asistencia"' class="evidenceCard">
+      <div class="escuelas-img"></div>
       <app-image-upload></app-image-upload>
     </app-cards>
-    <app-cards [title]='"Evidencia de Refrigerio"'>
+    <app-cards [title]='"Evidencia de Refrigerio"' class="evidenceCard">
+      <div class="escuelas-img"></div>
       <app-image-upload></app-image-upload>
     </app-cards>
-    <app-cards [title]='"Visitantes"'>
+    <app-cards [title]='"Visitantes"' class="evidenceCard">
+      <div class="escuelas-img"></div>
       <app-image-upload></app-image-upload>
     </app-cards>
+  </div>
+  <div>
+    <button (click)="guardarTodo()" class="save-info"><b><a style="text-decoration: none; color: white;">GUARDAR TODO</a></b></button>
   </div>
 </div>

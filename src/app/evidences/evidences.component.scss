@@ -11,5 +11,34 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  width: 45%;
+  width: 55%;
+  margin-top: 20px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.evidenceCard{
+  width: calc(90%/3);
+}
+
+.escuelas-img{
+  background-image: url(../../imgs/escuelas_img.png);
+  background-size: cover;
+  height: 320px;
+  width: 90%;
+  border-radius: 25px;
+  margin: 10px 0;
+}
+
+.save-info{
+  margin: 30px;
+  height: 60px;
+  width: 200px;
+  background: linear-gradient(to top, rgb(28, 182, 240), rgb(41, 189, 210));
+  border-radius: 40px;
+  border-style: none;
+  box-shadow: 0px 4px 10px rgba(100, 204, 233, 0.5);
+  color: white;
+  font-size: medium;
+  cursor: pointer;
 }
