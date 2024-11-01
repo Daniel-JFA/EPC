@@ -16,7 +16,6 @@
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
   color: rgba(0, 0, 0, 0.614);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .schools-info{
@@ -27,7 +26,6 @@
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
   color: rgba(0, 0, 0, 0.614);
-  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -40,4 +38,13 @@
 
 .school-items h3{
   color: #345B99;
+}
+
+.school-items a{
+  border: 1px solid rgba(128, 128, 128, 0.621);
+  padding: 0px 10px;
+  width: 49%;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
 }

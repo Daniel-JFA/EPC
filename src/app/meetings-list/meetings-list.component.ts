@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../components/header/header.component';
 import { RouterModule, RouterLinkWithHref } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-meetings-list',
   standalone: true,
-  imports: [HeaderComponent, RouterModule, RouterLinkWithHref],
+  imports: [HeaderComponent, RouterModule, RouterLinkWithHref, CommonModule],
   templateUrl: './meetings-list.component.html',
   styleUrl: './meetings-list.component.scss'
 })

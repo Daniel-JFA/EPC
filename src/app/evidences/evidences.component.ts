@@ -3,18 +3,26 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../components/header/header.component';
 import { CardsComponent } from '../components/cards/cards.component';
 import { ImageUploadComponent } from '../components/image-upload/image-upload.component';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule, RouterLinkWithHref, ActivatedRoute } from '@angular/router';
+import { Input } from '@angular/core';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-evidences',
   standalone: true,
-  imports: [HeaderComponent, CardsComponent, ImageUploadComponent],
+  imports: [HeaderComponent, CardsComponent, ImageUploadComponent, RouterLinkWithHref],
   templateUrl: './evidences.component.html',
   styleUrl: './evidences.component.scss'
 })
 export class EvidencesComponent {
-  constructor(private router: Router) {}
+  @Input() id?: string;
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
+  }
 
   guardarTodo() {
     Swal.fire({

@@ -1,1 +1,38 @@
 <app-header></app-header>
+<div class="groups-container">
+  <div class="welcome">
+    <div style="display: inline-flex; align-items: center;">
+      <div style="width: 30px; height: 30px; border: solid 1px gray; align-content: center; margin-right: 20px;"><p>icon</p></div>
+      <div>
+        <p>Prueba</p>
+        <h2>Grupo 4</h2>
+      </div>
+    </div>
+    <div class="groups-buttons">
+      <a href="/meetings_list">Encuentros</a>
+      <a href="">Agregar Beneficiarios</a>
+    </div>
+  </div>
+  <div style="width: 65%; display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <div *ngFor="let estudiante of estudiantes; let index = index;">
+      <div class="group-estudents">
+        <h3 style="text-align: start; font-family: Arial, Helvetica, sans-serif;">{{ estudiante.nombre }}</h3>
+        <div style="display: inline-flex; text-align: center; width: 90%; justify-content: space-between;">
+          <div>
+            <p style="color: gray;">Zona</p>
+            <h3>{{ estudiante.zona }}</h3>
+          </div>
+          <div>
+            <p style="color: gray;">Documento</p>
+            <h3>{{ estudiante.documento }}</h3>
+          </div>
+        </div>
+        <div style="display: inline-flex; text-align: center; width: 100%;">
+          <div style="width: 40px; height: 40px; border: solid 1px gray; align-content: center; margin-right: 20px; border-radius: 10px;"><p>Delet icon</p></div>
+          <button class="edit-profile"><b>Editar perfil</b></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="/schools" style="display: block; width: 150px; padding: 10px; background-color: #99B2C6; color: white; text-align: center; border-radius: 5px; text-decoration: none; margin-top: 20px;">Volver</a>
+</div>

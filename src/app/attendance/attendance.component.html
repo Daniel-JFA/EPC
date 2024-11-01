@@ -3,11 +3,12 @@
   <h1 style="width: 60%; text-align: start; font-family: Arial, Helvetica, sans-serif; font-size: 2vw; color: #14B3EE; margin-left: 20px; margin-top: 20px;">Asistencia</h1>
   <h2 style="width: 60%; text-align: start; font-family: Arial, Helvetica, sans-serif; font-size: 1.5vw; color: #1EBAD2; margin-left: 20px;">Encuentro {{ id }}</h2>
   <div class="attendance-container">
-    @for (student of estudiantesPrueba; track student; let index = $index) {
+    @for (student of estudiantePrueba; track student; let index = $index) {
       <div class="each-service">
-        <app-attendance-users [nombreEstudiante] = estudiantesPrueba[index]></app-attendance-users>
+        <app-attendance-users [nombreEstudiante] = estudiantePrueba[index].nombre [documentoEstudiante]=estudiantePrueba[index].documento></app-attendance-users>
       </div>
     }
   </div>
-  <button class="save-attendance"><b><a href="/evidences" style="text-decoration: none; color: white;">GUARDAR ASISTENCIA</a></b></button>
+  <button class="save-attendance"><b><a [routerLink]="['/evidences', id]" style="text-decoration: none; color: white;">GUARDAR ASISTENCIA</a></b></button>
+  <a href="/meetings_list" style="display: block; width: 100px; padding: 10px; background-color: #99B2C6; color: white; text-align: center; border-radius: 5px; text-decoration: none;"><b>Volver</b></a>
 </div>

@@ -3,12 +3,13 @@ import { AttendanceUsersComponent } from '../components/attendance-users/attenda
 import { HeaderComponent } from '../components/header/header.component';
 import { MeetingsListComponent } from '../meetings-list/meetings-list.component';
 import { Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLinkWithHref } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-attendance',
   standalone: true,
-  imports: [AttendanceUsersComponent, HeaderComponent, MeetingsListComponent],
+  imports: [AttendanceUsersComponent, HeaderComponent, MeetingsListComponent, CommonModule, RouterLinkWithHref],
   templateUrl: './attendance.component.html',
   styleUrl: './attendance.component.scss'
 })

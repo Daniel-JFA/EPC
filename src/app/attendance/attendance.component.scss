@@ -17,6 +17,7 @@ html, body {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .attendance-container {
@@ -30,6 +31,7 @@ html, body {
 
 .save-attendance{
   margin: 30px;
+  margin-bottom: 10px;
   height: 60px;
   width: 200px;
   background: linear-gradient(to top, rgb(28, 182, 240), rgb(41, 189, 210));
