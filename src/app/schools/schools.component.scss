@@ -48,3 +48,34 @@
   color: black;
   border-radius: 10px;
 }
+
+#comunaIcon{
+  background-image: url(../../imgs/comunaIcon.png);
+  background-size: cover;
+  align-self: center;
+  justify-self: center;
+}
+
+#recursoIcon{
+  background-image: url(../../imgs/recursoIcon.png);
+  background-size: cover;
+  align-self: center;
+  justify-self: center;
+  filter: invert(61%) sepia(0%) saturate(0%) hue-rotate(347deg) brightness(92%) contrast(87%);
+}
+
+#codigoIcon{
+  background-image: url(../../imgs/codigoIcon.png);
+  background-size: cover;
+  align-self: center;
+  justify-self: center;
+  filter: invert(61%) sepia(0%) saturate(0%) hue-rotate(347deg) brightness(92%) contrast(87%);
+}
+
+#grupoIcon{
+  background-image: url(../../imgs/grupoIcon.png);
+  background-size: contain;
+  align-self: center;
+  justify-self: center;
+  filter: invert(61%) sepia(0%) saturate(0%) hue-rotate(347deg) brightness(92%) contrast(87%);
+}

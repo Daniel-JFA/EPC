@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../components/header/header.component';
+import { ModalComponent } from '../components/modal/modal.component';
+import { SwitchService } from '../services/switch.service';
 
 @Component({
   selector: 'app-groups',
   standalone: true,
-  imports: [HeaderComponent, CommonModule],
+  imports: [HeaderComponent, CommonModule, ModalComponent],
   templateUrl: './groups.component.html',
   styleUrl: './groups.component.scss'
 })
-export class GroupsComponent {
+export class GroupsComponent implements OnInit {
+  constructor(private modalSS: SwitchService){ }
+  modalSwitch:boolean = false;
+
   estudiantes = [
     {
       nombre: 'Juliana',
@@ -37,4 +42,12 @@ export class GroupsComponent {
       zona: '004'
     },
   ]
+
+  ngOnInit(){
+    this.modalSS.$modal.subscribe((valor) => {this.modalSwitch = valor});
+  }
+
+  openModal(){
+    this.modalSwitch = true;
+  }
 }
