@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../components/header/header.component';
 import { CardsComponent } from '../components/cards/cards.component';
 import { ImageUploadComponent } from '../components/image-upload/image-upload.component';
-import { Router, RouterModule, RouterLinkWithHref, ActivatedRoute } from '@angular/router';
+import { Router, RouterLinkWithHref, ActivatedRoute } from '@angular/router';
 import { Input } from '@angular/core';
 import Swal from 'sweetalert2';
 
@@ -14,6 +14,7 @@ import Swal from 'sweetalert2';
   templateUrl: './evidences.component.html',
   styleUrl: './evidences.component.scss'
 })
+
 export class EvidencesComponent {
   @Input() id?: string;
   constructor(private router: Router, private route: ActivatedRoute) {}

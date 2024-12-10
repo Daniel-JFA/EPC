@@ -1,0 +1,237 @@
+<app-header></app-header>
+<div class="main-characterization-container">
+  <div class="title-container">
+    <h2>Caracterización</h2>
+    <p>Información del Beneficiario</p>
+  </div>
+
+  <form action="" class="main-characterization-container" style="width: 100%;">
+    <div class="inputs-container">
+      <div class="inputs">
+        <label for="IDType">Tipo de Identificación<span style="color: red;">*</span></label>
+
+        <select name="IDType" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="CC">Cédula de Ciudadanía</option>
+          <option value="TI">Tarjeta de Identidad</option>
+          <option value="NIP">Número de Identificación personal</option>
+          <option value="Pasaporte">Pasaporte</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="">Número de documento <span style="color: red;">*</span></label>
+        <input type="text" class="selectors" required>
+      </div>
+
+      <div class="inputs">
+        <label for="">Nombre Completo <span style="color: red;">*</span></label>
+        <input type="text" class="selectors" required>
+      </div>
+
+      <div class="inputs">
+        <label for="sexo">Sexo<span style="color: red;">*</span></label>
+
+        <select name="sexo" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Prefiero no decir">Prefiero no decir</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="">Fecha de Nacimiento <span style="color: red;">*</span></label>
+        <input type="date" class="selectors" required>
+      </div>
+    </div>
+
+    <hr style="color: #7aedd4; width: 49%; margin: 30px 0 0 0;">
+
+    <div class="inputs-container">
+      <div class="inputs">
+        <label for="EstadoCivil">Estado Civil<span style="color: red;">*</span></label>
+
+        <select name="EstadoCivil" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Soltero">Soltero/a</option>
+          <option value="Casado">Casado/a</option>
+          <option value="Viudo">Viudo/a</option>
+          <option value="Divorciado">Divorciado/a  </option>
+          <option value="Union Civil o de hecho">Unión civil o de hecho</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="Organizacion">Organización a la que pertenece<span style="color: red;">*</span></label>
+
+        <select name="Organizacion" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Ninguna">Ninguna</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="Ocupacion">Ocupación<span style="color: red;">*</span></label>
+
+        <select name="Ocupacion" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Empleado">Empleado</option>
+          <option value="Desempleado">Desempleado</option>
+          <option value="Estudiante">Estudiante</option>
+        </select>
+      </div>
+    </div>
+
+    <hr style="color: #7aedd4; width: 49%; margin: 30px 0 0 0;">
+
+    <div class="inputs-container">
+      <label for="">Dirección <span style="color: red; width: 100%;">*</span></label>
+      <input type="text" class="selectors" required>
+      <div class="inputs">
+        <label for="Zona">Zona<span style="color: red;">*</span></label>
+
+        <select name="Zona" class="selectors" [(ngModel)]="selectedZona" (change)="chooseComuna()" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Zona 1">Zona 1 - Nororiental</option>
+          <option value="Zona 2">Zona 2 - Noroccidental</option>
+          <option value="Zona 3">Zona 3 - Centro oriental</option>
+          <option value="Zona 4">Zona 4 - Centro occidental</option>
+          <option value="Zona 5">Zona 5 - Suroriental</option>
+          <option value="Zona 6">Zona 6 - Suroccidental</option>
+          <option value="Corregimientos">Corregimientos</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="Comuna">Comuna<span style="color: red;">*</span></label>
+
+        <select name="Comuna" class="selectors" [(ngModel)]="selectedComuna" (change)="chooseBarrio()" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option *ngFor="let comuna of choosenComuna" [value]="comuna">
+            {{ comuna }}
+          </option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="Barrio">Barrio<span style="color: red;">*</span></label>
+
+        <select name="Barrio" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option *ngFor="let barrio of choosenBarrio" [value]="barrio">
+            {{ barrio }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <hr style="color: #7aedd4; width: 49%; margin: 30px 0 0 0;">
+
+    <div class="inputs-container">
+      <div class="inputs">
+        <label for="">Número de celular <span style="color: red;">*</span></label>
+        <input type="text" class="selectors" required>
+      </div>
+
+      <div class="inputs">
+        <label for="Escolaridad">Último nivel de escolaridad alcanzado<span style="color: red;">*</span></label>
+
+        <select name="Escolaridad" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Bachiller">Bachiller</option>
+          <option value="Tecnico">Técnico</option>
+          <option value="Profesional">Profesional</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="Etnia">Etnia<span style="color: red;">*</span></label>
+
+        <select name="Etnia" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Afrocolombiano">Afrocolombiano</option>
+          <option value="ROM">ROM</option>
+          <option value="Ninguno">Ninguno</option>
+        </select>
+      </div>
+    </div>
+
+    <hr style="color: #7aedd4; width: 49%; margin: 30px 0 0 0;">
+
+    <div class="inputs-container">
+      <div class="inputs">
+        <label for="PoblacionVictima">¿Es usted víctima de desplazamiento?<span style="color: red;">*</span></label>
+
+        <div style="display: inline-flex;">
+          <input type="radio" id="si" name="PoblacionVictima" value="Si">
+          <label for="si" style="margin-right: 20px;">Si</label>
+          <input type="radio" id="no" name="PoblacionVictima" value="No">
+          <label for="no">No</label>
+          </div>
+      </div>
+
+      <div class="inputs">
+        <label for="">¿Cuánto tiempo lleva siendo desplazado? (El tiempo está en meses, solo escriba el número. En caso de que no sea desplazado escriba "0")<span style="color: red;">*</span></label>
+        <input type="number" min="0" class="selectors" required>
+      </div>
+
+      <div class="inputs">
+        <label for="">¿Dónde habitaba antes de ser desplazado? (En caso de no ser desplazado escriba "NA")<span style="color: red;">*</span></label>
+        <input type="text" class="selectors" style="margin-top: 15px;" required>
+      </div>
+    </div>
+
+    <hr style="color: #7aedd4; width: 49%; margin: 30px 0 0 0;">
+
+    <div class="inputs-container">
+      <div class="inputs">
+        <label for="Discapacidad">¿Cuenta con alguna discapacidad? ¿Qué tipo?<span style="color: red;">*</span></label>
+
+        <select name="Discapacidad" class="selectors" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Cognitiva">Cognitiva</option>
+          <option value="Auditiva">Auditiva</option>
+          <option value="NA">No cuento con ninguna discapacidad</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="">Enfoque diferencial<span style="color: red;">*</span></label>
+        <input type="text" class="selectors" required>
+      </div>
+
+      <div class="inputs">
+        <label for="EnfermedadCronica">¿Tiene una enfermedad crónica?<span style="color: red;">*</span></label>
+
+        <div style="display: inline-flex;">
+          <input type="radio" id="si" name="EnfermedadCronica" value="Si">
+          <label for="si" style="margin-right: 20px;">Si</label>
+          <input type="radio" id="no" name="EnfermedadCronica" value="No">
+          <label for="no">No</label>
+          </div>
+      </div>
+
+      <div class="inputs">
+        <label for="">¿Cual enfermedad crónica? (Escriba NA en caso de haber respondido no a la pregunta anterior)<span style="color: red;">*</span></label>
+        <input type="text" class="selectors" required>
+      </div>
+
+      <div class="inputs">
+        <label for="">¿Cual es el tratamiento de su enfermedad crónica? (Escriba NA en caso de haber respondido no a la pregunta anterior)<span style="color: red;">*</span></label>
+        <input type="text" class="selectors" required>
+      </div>
+
+      <div class="inputs">
+        <label for="" style="margin-top: 52px;">Problemática Riesgo<span style="color: red;">*</span></label>
+        <input type="text" class="selectors" required>
+      </div>
+    </div>
+
+    <div style="display: inline-flex; width: 40%; justify-content: space-between; margin-top: 10px;">
+      <input (click)="guardarTodo()" type="submit" value="Crear Beneficiario" style="all: unset; cursor: pointer; display: block; width: 45%; padding: 10px; background: linear-gradient(to bottom, #029e9e, #20C997); color: white; text-align: center; border-radius: 5px; text-decoration: none; margin-top: 20px;">
+      <a href="/home" style="display: block; width: 45%; padding: 10px; background-color: #99B2C6; color: white; text-align: center; border-radius: 5px; text-decoration: none; margin-top: 20px;">Cancelar</a>
+    </div>
+  </form>
+</div>
